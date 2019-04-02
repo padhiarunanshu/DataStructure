@@ -14,13 +14,13 @@ class TreeTraversal {
     TreeTraversal();
     ~TreeTraversal();
     
-    void createTree();
+    void createTree(Node* root, int data);
     
-    void preorder();
-    void inorder();
-    void postorder();
-    void postorder1stk();
-    void postorder2stk();
+    void preorder(Node* root);
+    void inorder(Node* root);
+    void postorder(Node* root);
+    void postorder1stk(Node* root);
+    void postorder2stk(Node* root);
     
 
   private:
