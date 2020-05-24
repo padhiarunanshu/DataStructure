@@ -1,5 +1,3 @@
-http://ncerndjknode10.etv.nce.amadeus.net:8080/tdm/job/TDS-Night-DEV_deliver-PATCH/33/
-
 TiVo
 
 1. 0 1 2
