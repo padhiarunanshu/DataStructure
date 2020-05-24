@@ -1,12 +1,12 @@
-TiVo
-
-1. 0 1 2
-   3 0 5
-   6 7 8 -> 
+01 TiVo:
+-------
+1. 0 1 2        0 0 0
+   3 0 5 ---->  0 0 0
+   6 7 8        0 0 8 
    
-2. http://google.co.in/q?i am awesome -> i%20am%20awesome -> std::
+2. http://google.co.in/q?i am awesome -> i%20am%20awesome
 
-
+join linked list
  1->4
  2->3
  
@@ -16,7 +16,8 @@ TiVo
  
  pf("%c", *c);
  
-Infenera:
+02 Infenera:
+------------
    second largest element in an array
    find the number in the array that appears odd number of time [2,2,3,3,4,4,5] - ans : 5
    isBST or not? how to find out in optimized way
@@ -37,6 +38,7 @@ Questions:
 1. LRU - Least recently used.
 2. 3 lists with different sizes.. make it same
 3. n chocolates 3 wrappers can be exchanged with one chocolate. how many chocs u'll have.
+4. sort 0 1 2 array. (dutch national flag problem)
 
 ----------------------------------------------
 https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/MinJumpToReachEnd.java
@@ -48,8 +50,6 @@ http://www.geeksforgeeks.org/a-data-structure-question/
 
 http://bigocheatsheet.com/
 https://rndwww.nce.amadeus.net/git/users/rgeissler/repos/toolbox/browse/include/mdw/Exception.h#92
-
-
 
 //
 void function(int* A, int* B, int N) // 2 1 5 9 => 45 90 18 10
@@ -132,4 +132,4 @@ void list<T>::insert(T* obj) {
 
 1. Why not possible -> static void fun() const; ?
 2. Return value optimizatoin same as copy elision?
-3. 
+3. Implement shared_ptr, string class, vector class, etc.
