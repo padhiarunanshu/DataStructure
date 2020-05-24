@@ -1,0 +1,137 @@
+http://ncerndjknode10.etv.nce.amadeus.net:8080/tdm/job/TDS-Night-DEV_deliver-PATCH/33/
+
+TiVo
+
+1. 0 1 2
+   3 0 5
+   6 7 8 -> 
+   
+2. http://google.co.in/q?i am awesome -> i%20am%20awesome -> std::
+
+
+ 1->4
+ 2->3
+ 
+ int k = 002187863;
+ int* p = &k;
+ char* c = p;
+ 
+ pf("%c", *c);
+ 
+Infenera:
+   second largest element in an array
+   find the number in the array that appears odd number of time [2,2,3,3,4,4,5] - ans : 5
+   isBST or not? how to find out in optimized way
+   15 matchstick highest number. 7111111
+
+-----------------------------------
+Questions:
+1. difference between vector and list? When to use what?
+	scenario: i have fixed data (say 10) and it doesn't change randomly. may be once in a month, vector or list what do i use?
+2. what happens when I allocate a storage with new and do a free to deallocate?
+3. map find time complexity, what is rb tree? insertion deletion, which is faster?
+4. what does core file have?
+5. thread safe singleton class
+6. what is the problem that arises when two thread tries to access the same resource without lock
+7. write a stack interface (non template class) from which any type of stack can be created (e.g. int stack, char stack etc)
+8. 
+-----------------
+1. LRU - Least recently used.
+2. 3 lists with different sizes.. make it same
+3. n chocolates 3 wrappers can be exchanged with one chocolate. how many chocs u'll have.
+
+----------------------------------------------
+https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/MinJumpToReachEnd.java
+https://www.youtube.com/watch?v=KVF4kYvd7e8&t=2s
+http://www.geeksforgeeks.org/medium/
+http://www.geeksforgeeks.org/telephone-number/
+https://stackoverflow.com/questions/12375591/vector-of-vectors-to-create-matrix
+http://www.geeksforgeeks.org/a-data-structure-question/
+
+http://bigocheatsheet.com/
+https://rndwww.nce.amadeus.net/git/users/rgeissler/repos/toolbox/browse/include/mdw/Exception.h#92
+
+
+
+//
+void function(int* A, int* B, int N) // 2 1 5 9 => 45 90 18 10
+{
+	int prd = 1;
+	for(int j = 0; j < N; j++) {
+		prd *= A[j];
+	}
+	// prd = 1234
+	for(int j = 0; j < N; j++) {
+		B[j] = prd/A[j];
+		int temp = 1;
+		for(int i = 0; i < N; ++i) {
+			if (i != j) temp *= A[i];
+		}
+		B[j] = temp;
+	}
+}
+
+// issue ?
+type_struct_t* st = new type_struct_t;
+...
+memset(st, 0, sizeof(st));
+
+// 
+size_t sz = buf->size();
+while(--sz > 0) {
+	// do stuff..
+}
+	
+// output
+class A{
+public:
+	A(){}
+	~A() {
+		throw 42;
+	}
+};
+
+int main() {
+	try {
+		A a;
+		throw 32;
+	} catch(int a) {
+		cout << a <<endl;
+	}
+}
+
+// explain. output?
+int i = 5;
+int j = i++;
+
+//------------------
+
+template<Typename T>
+class list {
+private:
+  struct data {
+	T* _head;
+	data* next;
+  } _data;
+public:
+    void insert(T* obj);
+	T* delete();
+};
+
+template<Typename T>
+void list<T>::insert(T* obj) {
+	if(obj == NULL) {
+		_data._head = new T();
+		_data.next = NULL;
+		obj = 
+	} else {
+		_data.next = obj;
+		obj = _data.head;
+	}
+}
+
+---------------------------
+
+1. Why not possible -> static void fun() const; ?
+2. Return value optimizatoin same as copy elision?
+3. 
