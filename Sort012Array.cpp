@@ -24,3 +24,14 @@ int main() {
 	
 	return 0;
 }
+
+/*
+// When the array is just 0s and 1s.
+	for(int i = 0, j = size - 1; i <= j; ) {
+		if(arr[i] == 1) {
+			swap(arr[i], arr[j--]);
+		} else {
+			i++;
+		}
+	}
+*/
