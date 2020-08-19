@@ -1,8 +1,7 @@
 
 #include <TreeTraversal.h>
-
-TreeTraversal::TreeTraversal() {}
-~TreeTraversal::TreeTraversal() {}
+#include <queue>
+#include <stack>
 
 void TreeTraversal::create(Node*& root, int data) {
     if(root == NULL) {    
