@@ -58,8 +58,11 @@ void printLeftView(Node* root) {
 	leftViewUtil(root, 1, maxLevel);
 }
 
+
 // --------------------------------------------------------------------------------------
-// Tree Problem statements...
+// Tree Problems...
+// --------------------------------------------------------------------------------------
+
 // 1. find the lowest common ancestor of two nodes in a tree.
 Node* lowestCommonAncestor(Node* root, int n1, int n2) {
 	if(root == NULL) return NULL;
@@ -75,10 +78,14 @@ Node* lowestCommonAncestor(Node* root, int n1, int n2) {
 	return left != NULL ? left : right;
 }
 
+// --------------------------------------------------------------------------------------
+
 // 2. Find the distance bwetween two nodes.
 int findDistance(Node* root, Node* n1, Node* n2) {
 
 }
+
+// --------------------------------------------------------------------------------------
 
 // 3. Check if the given binary tree is a Binary search tree?
 bool IsBST(Node* root, int min, int max) {
@@ -92,6 +99,26 @@ bool IsBST(Node* root, int min, int max) {
 		return false;
 	}
 }
+
+// --------------------------------------------------------------------------------------
+
+// 4. Invert a binary tree.
+Node* invertTree(Node* root) {
+    if(root == NULL) {
+        return NULL;
+    } else {
+        Node* temp;
+        root->left = invertTree(root->left);
+        root->right = invertTree(root->right);
+        
+        temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+    }
+    return root;
+}
+
+
 
 // --------------------------------------------------------------------------------------
 
