@@ -58,6 +58,22 @@ void printLeftView(Node* root) {
 	leftViewUtil(root, 1, maxLevel);
 }
 
+// 6. Print right view of a binary tree.
+void rightViewUtil(Node* root, int level, int& maxLevel) {
+	if(root == NULL) return;
+
+	if(maxLevel < level) {
+		cout << root->data << " ";
+		maxLevel = level;
+	}
+	rightViewUtil(root->right, level + 1, maxLevel);
+	rightViewUtil(root->left, level + 1, maxLevel);
+}
+
+void rightView(Node* root) {
+	int maxLevel = 0;
+	rightViewUtil(root, 0, maxLevel);
+}
 
 // --------------------------------------------------------------------------------------
 // Tree Problems...
@@ -93,7 +109,7 @@ bool IsBST(Node* root, int min, int max) {
 	
 	if(root->data >= min && root->data < max
 	     && IsBST(root->left, min, root->data) 
-	     && IsBST(root->right, root->data, max) ) {
+	     && IsBST(root->right, root->data, max) ) { // root->data - 1 -> to allow only distinct values! 
 		return true;
 	} else {
 		return false;
@@ -103,6 +119,7 @@ bool IsBST(Node* root, int min, int max) {
 // --------------------------------------------------------------------------------------
 
 // 4. Invert a binary tree.
+// recurssively
 Node* invertTree(Node* root) {
     if(root == NULL) {
         return NULL;
@@ -118,10 +135,51 @@ Node* invertTree(Node* root) {
     return root;
 }
 
+// iteratively
+void mirror(Node* root) 
+{ 
+    if (root == NULL) 
+        return;
+  
+    queue<Node*> q; 
+    q.push(root); 
 
+    // Do BFS. While doing BFS, keep swapping 
+    // left and right children 
+    while (!q.empty()) 
+    { 
+        // pop top node from queue 
+        Node* curr = q.front(); 
+        q.pop(); 
+  
+        // swap left child with right child 
+        swap(curr->left, curr->right); 
+  
+        // push left and right children 
+        if (curr->left) 
+            q.push(curr->left); 
+        if (curr->right) 
+            q.push(curr->right); 
+    } 
+}
+
+// create a mirror tree from a given tree
+void mirrorify(Node* root, Node** mirror) 
+{ 
+    if (root == NULL) { 
+        mirror = NULL; 
+        return; 
+    } 
+  
+    // Create new mirror node from original tree node 
+    *mirror = new Node(root->data); 
+    mirrorify(root->left, &((*mirror)->right)); 
+    mirrorify(root->right, &((*mirror)->left)); 
+}
 
 // --------------------------------------------------------------------------------------
 
+/**********************************/
 int main() {	
 	// your code goes here
 	Node* root = NULL;
@@ -143,3 +201,5 @@ int main() {
 	
 	return 0;
 }
+
+/**********************************/
