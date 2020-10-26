@@ -26,7 +26,6 @@ int main(){
 }
 
 // 31  C++/Dynamic Programming/Longest Common Substring.cpp 
-
 #include <iostream>
 using namespace std;
 
@@ -60,7 +59,6 @@ int main(){
 } 
 
 // 27  C++/Dynamic Programming/Longest palindromic Subsequence.cpp 
-
 #include <iostream>
 using namespace std;
 int longest_palindromic_subsequence(string str){
@@ -90,7 +88,6 @@ int main(){
 } 
 
 // 31  C++/Heaps - Priority Queues/K-th Largest element of the stream.cpp 
-
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -124,13 +121,11 @@ int main(){
 }
 
 // 3  C++/Linked List/Reverse a linked list recursively.cpp 
-
-void reverse_list(list_node *head){
-    list_node *
-}
+// void reverse_list(list_node *head){
+//     list_node *
+// }
 
 // 19  C++/Recursion/Partition of array on the pivot.cpp 
-
 #include<iostream>
 using namespace std;
 void partition(int array[],int low,int high){
@@ -150,8 +145,8 @@ int main(){
     partition(array,0,n);
     return 0;
 }
- 23  C++/Recursion/Permutation of a string.cpp 
-@@ -0,0 +1,23 @@
+
+// 23  C++/Recursion/Permutation of a string.cpp 
 #include <iostream>
 using namespace std;
 
